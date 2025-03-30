@@ -1,0 +1,8 @@
+{
+    "rules": [
+        {
+            "pathPattern": "https://tagai.fun/commerce/**",
+            "apiPath": "https://bsc-api.tagai.fun/action/commerce/**"
+        }
+    ]
+}

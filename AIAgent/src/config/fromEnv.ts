@@ -1,0 +1,39 @@
+import { b64uEnc, b64uDec } from '../utils/helper.ts'
+
+export default {
+    DB_HOST: process.env.DB_HOST,
+    DB_NAME: process.env.DB_NAME,
+    DB_USER: process.env.DB_USER,
+    DB_PASSWORD: b64uDec(process.env.DB_PASSWORD),
+
+    CHAIN_PRE: process.env.CHAIN_PRE,
+
+    REDIS_HOST: process.env.REDIS_HOST,
+    REDIS_PORT: process.env.REDIS_PORT,
+    REDIS_PWD: b64uDec(process.env.REDIS_PWD),
+
+    TWITTER_SEARCH_TOKEN: b64uDec(process.env.TWITTER_SEARCH_TOKEN),
+    TWITTER_SEARCH_TOKEN2: b64uDec(process.env.TWITTER_SEARCH_TOKEN2),
+
+    AGENT_REFRESH_PASS_KEY: process.env.AGENT_REFRESH_PASS_KEY,
+    BASE_API_URL: process.env.BASE_API_URL,
+
+    ENCODE_KEY: process.env.ENCODE_KEY,
+    ENCODE_IV: process.env.ENCODE_IV,
+
+    TWITTER_DRY_RUN: process.env.TWITTER_DRY_RUN,
+    TWITTER_POLL_INTERVAL: process.env.TWITTER_POLL_INTERVAL,
+    TWITTER_SEARCH_ENABLE: process.env.TWITTER_SEARCH_ENABLE,
+    TWITTER_TARGET_USERS: process.env.TWITTER_TARGET_USERS,
+    TWITTER_RETRY_LIMIT: process.env.TWITTER_RETRY_LIMIT,
+    TWITTER_SPACES_ENABLE: process.env.TWITTER_SPACES_ENABLE,
+    POST_INTERVAL_MIN: process.env.POST_INTERVAL_MIN,
+    POST_INTERVAL_MAX: process.env.POST_INTERVAL_MAX,
+    ENABLE_ACTION_PROCESSING: process.env.ENABLE_ACTION_PROCESSING,
+    ACTION_INTERVAL: process.env.ACTION_INTERVAL,
+    POST_IMMEDIATELY: process.env.POST_IMMEDIATELY,
+    MAX_ACTIONS_PROCESSING: process.env.MAX_ACTIONS_PROCESSING,
+    ACTION_TIMELINE_TYPE: process.env.ACTION_TIMELINE_TYPE,
+
+    TAGAI_TAG: process.env.TAGAI_TAG
+}

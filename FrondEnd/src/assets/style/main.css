@@ -1,0 +1,103 @@
+@import "element.css";
+@import "icons.scss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  background: white;
+}
+
+#app {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #FCFCFD;
+  /*background-image: url("@/assets/images/main-bg.svg");*/
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+.no-scroll-bar::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(194, 194, 194, 0.5);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: transparent;
+}
+
+input {
+  outline: none;
+}
+
+.emoji-picker {
+  padding: 0!important;
+  width: 100% !important;
+}
+.emoji-body .emojis-wrap .emoji-block {
+  padding: 4px!important;
+}
+.text-gradient {
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  width: fit-content;
+}
+.multi-content {
+  word-break: break-word;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.content {
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.multi-content-3 {
+  -webkit-line-clamp: 3;
+}
+.multi-content-2 {
+  -webkit-line-clamp: 2;
+}
+.multi-content-5 {
+  -webkit-line-clamp: 5;
+}
+button:disabled {
+  opacity: 0.5;
+}
+
+.gradient-border {
+  border-style: solid;
+  border-color: transparent;
+  background-origin: border-box;
+  box-sizing: border-box;
+}
+.cropper-container {
+  height: 500px;
+  max-height: 100%;
+  position: relative;
+  overflow: scroll;
+  canvas {
+    opacity: 0;
+  }
+  .vue-cropper {
+    position: absolute!important;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+}

@@ -1,0 +1,16 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: evolution:0.1
+    container_name: ${AGENT_NAME}
+    working_dir: /app
+    command: [ "pnpm", "run", "start", "--character", "/app/characters/${AGENT_NAME}.character.json" ]
+    ports:
+      - "${SERVER_PORT}:${SERVER_PORT}"
+    volumes:
+      - ./.env:/app/.env
+      - ./characters:/app/characters
+      - ./data:/app/data
